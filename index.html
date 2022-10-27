@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animatsiya</title>
+	<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+	<style type="text/css">.lds-heart {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  transform: rotate(45deg);
+  transform-origin: 40px 40px;
+}
+.lds-heart div {
+  top: 32px;
+  left: 32px;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background: red;
+  animation: lds-heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.lds-heart div:after,
+.lds-heart div:before {
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 32px;
+  height: 32px;
+  background: black;
+}
+.lds-heart div:before {
+  left: -24px;
+  border-radius: 50% 0 0 50%;
+}
+.lds-heart div:after {
+  top: -24px;
+  border-radius: 50% 50% 0 0;
+}
+@keyframes lds-heart {
+  0% {
+    transform: scale(0.95);
+  }
+  5% {
+    transform: scale(1.1);
+  }
+  39% {
+    transform: scale(0.85);
+  }
+  45% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+
+
+/*bodY {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.center {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+}
+.wave {
+  width: 5px;
+  height: 100px;
+  background: linear-gradient(45deg, cyan, #fff);
+  margin: 10px;
+  animation: wave 1s linear infinite;
+  border-radius: 20px;
+}
+.wave:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.wave:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.wave:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.wave:nth-child(5) {
+  animation-delay: 0.4s;
+}
+.wave:nth-child(6) {
+  animation-delay: 0.5s;
+}
+.wave:nth-child(7) {
+  animation-delay: 0.6s;
+}
+.wave:nth-child(8) {
+  animation-delay: 0.7s;
+}
+.wave:nth-child(9) {
+  animation-delay: 0.8s;
+}
+.wave:nth-child(10) {
+  animation-delay: 0.9s;
+}
+
+@keyframes wave {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}*/
+
+
+
+
+
+/*.loader {
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+  position: relative;
+  border: 2px solid #FFF;
+  box-sizing: border-box;
+  animation: rotation 2s linear infinite;
+}
+.loader::after,
+.loader::before {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 2px solid #FF3D00;
+  width: 38px;
+  height: 38px;
+  animation: rotationBack 1.5s linear infinite;
+  transform-origin: center center;
+}
+.loader::before {
+  width: 28px;
+  height: 28px;
+  border-color: #FFF;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+@keyframes rotationBack {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}*/
+
+
+
+.loader {
+  width: 60px;
+  height: 60px;
+  display: block;
+  margin: 20px auto;
+  position: relative;
+  background: radial-gradient(ellipse at center, #FFF 69%, rgba(0, 0, 0, 0) 70%), linear-gradient(to right, rgba(0, 0, 0, 0) 47%, #FFF 48%, #FFF 52%, rgba(0, 0, 0, 0) 53%);
+  background-size: 20px 20px , 20px auto;
+  background-repeat: repeat-x;
+  background-position: center bottom, center -5px;
+  box-sizing: border-box;
+}
+.loader::before,
+.loader::after {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  left: -20px;
+  top: 0;
+  width: 20px;
+  height: 60px;
+  background: radial-gradient(ellipse at center, black 69%, rgba(0, 0, 0, 0) 70%), linear-gradient(to right, rgba(0, 0, 0, 0) 47%, #FFF 48%, #FFF 52%, rgba(0, 0, 0, 0) 53%);
+  background-size: 20px 20px , 20px auto;
+  background-repeat: no-repeat;
+  background-position: center bottom, center -5px;
+  transform: rotate(0deg);
+  transform-origin: 50% 0%;
+  animation: animPend 1s linear infinite alternate;
+}
+.loader::after {
+  animation: animPend2 1s linear infinite alternate;
+  left: 100%;
+}
+
+@keyframes animPend {
+  0% {
+    transform: rotate(22deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes animPend2 {
+  0%, 55% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-22deg);
+  }
+}
+</style>
+</head>
+<body style="background-color: lightblue">
+<div class="lds-heart"><div></div></div>
+<!-- <div class="center">
+  <div class="wave"></div>
+  <div class="wave"></div>
+  <div class="wave"></div>
+  <div class="wave"></div>
+  <div class="wave"></div>
+  <div class="wave"></div>
+  <div class="wave"></div>
+  <div class="wave"></div>
+  <div class="wave"></div>
+  <div class="wave"></div>
+</div> -->
+<!-- <span class="loader"></span> -->
+<span class="loader"></span>
+<h1 style="text-align: center; font-size: 100px" class="animate__animated animate__jello">miniVkusil</h1>
+</body>
+</html>
